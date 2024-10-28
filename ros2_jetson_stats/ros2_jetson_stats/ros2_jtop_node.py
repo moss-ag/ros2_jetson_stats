@@ -63,7 +63,7 @@ class JTOPPublisher(Node):
         self.i = 0
         self.jetson = jtop.jtop(interval=0.5)
         self.arr = DiagnosticArray()
-        self.get_logger().info("Jetson Stats has started with interval : {}\n You can run following:\n  1. $ros2 run rqt_topic rqt_topic \n  2. Services for controlling fan_speed, power_mode, jetson_clocks\n".format(timer_period))
+        self.get_logger().info("Jetson Stats has started with interval : {}".format(timer_period))
 
     def start(self):
         self.jetson.start()
